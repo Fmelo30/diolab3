@@ -1,0 +1,22 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Inst?ncia EC2 Linux t2.micro com Security Group default",
+  "Resources": {
+    "MinhaInstanciaEC2": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "InstanceType": "t2.micro",
+        "ImageId": "ami-0236922087fa98b6e",
+        "SecurityGroups": [
+          "default"
+        ],
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "ServidorLinux"
+          }
+        ]
+      }
+    }
+  }
+}
